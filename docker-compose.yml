@@ -1,0 +1,8 @@
+version: '3'
+services:
+  mdns-repeater:
+    image: tete1030/mdns-repeater
+    container_name: mdns-repeater
+    restart: unless-stopped
+    command: -f zt0 br-lan
+    network_mode: "host"

@@ -7,7 +7,8 @@ ZIP_FILES = mdns-repeater	\
 			README.txt		\
 			LICENSE.txt
 
-HGVERSION=$(shell git rev-parse HEAD )
+# Add this line to use HGVERSION from environment, with a default value
+HGVERSION ?= $(shell git rev-parse HEAD )
 
 CFLAGS=-Wall
 
